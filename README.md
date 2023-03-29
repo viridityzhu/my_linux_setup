@@ -17,6 +17,11 @@ Check gpu status
 nvidia-smi
 ```
 
+Check cpu usage: 
+```bash
+htop
+```
+
 ## Download Useful Softwares
 
 - Conda
@@ -39,9 +44,18 @@ python3 -m pip install --user --upgrade pipx
 pipx install ranger-fm
 ```
 
-[tldr]: too long; don't read
+[tldr](https://github.com/tldr-pages/tldr): too long; don't read
+```bash
+pipx install tldr
+```
 
-[tag]
+[bashmarks](https://github.com/huyng/bashmarks)
+```bash
+git clone git://github.com/huyng/bashmarks.git
+cd bashmarks
+make install
+source ~/.local/bin/bashmarks.sh from within your ~.bash_profile or ~/.bashrc file
+```
 
 []
 
