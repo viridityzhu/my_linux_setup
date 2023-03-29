@@ -82,7 +82,7 @@ filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和
 " -------colorscheme---------
 " set background=dark
 " colorscheme solarized
-if has("termguicolors") # true color!!!
+if has("termguicolors") " true color!!!
     " fix bug for vim
     set t_8f=[38;2;%lu;%lu;%lum
     set t_8b=[48;2;%lu;%lu;%lum
