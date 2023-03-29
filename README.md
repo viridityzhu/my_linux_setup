@@ -51,10 +51,10 @@ pipx install tldr
 
 [bashmarks](https://github.com/huyng/bashmarks)
 ```bash
-git clone git://github.com/huyng/bashmarks.git
+git clone https://github.com/huyng/bashmarks.git
 cd bashmarks
 make install
-source ~/.local/bin/bashmarks.sh from within your ~.bash_profile or ~/.bashrc file
+echo 'source ~/.local/bin/bashmarks.sh' >> ~/.bashrc
 ```
 
 [vundle](https://github.com/VundleVim/Vundle.vim): Plugin manager for Vim
@@ -72,6 +72,8 @@ cp my_linux_setup/.vimrc ~
 To install Vim plugins from command line: `vim +PluginInstall +qall`
 
 `.bashrc`
+
+*\[optional\] Uncommnet `force_color_prompt=yes` at around line 46.*
 
 `.tmux.conf`
 ```bash
