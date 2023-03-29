@@ -57,13 +57,24 @@ make install
 source ~/.local/bin/bashmarks.sh from within your ~.bash_profile or ~/.bashrc file
 ```
 
-[]
+[vundle](https://github.com/VundleVim/Vundle.vim): Plugin manager for Vim
+```bash
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+*need to clone into `~/.vim/bundle`*
 
 ## Configuration Files
 
 `.vimrc`
+```bash
+cp my_linux_setup/.vimrc ~
+```
+To install Vim plugins from command line: `vim +PluginInstall +qall`
 
 `.bashrc`
 
 `.tmux.conf`
+```bash
+cp my_linux_setup/.tmux.conf ~
+```
 
