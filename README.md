@@ -83,6 +83,7 @@
 ## Configuration Files
 Clone this repo to get the configuration files:
 ```bash
+cd
 git clone https://github.com/viridityzhu/my_linux_setup.git
 ```
 
@@ -103,4 +104,11 @@ git clone https://github.com/viridityzhu/my_linux_setup.git
   ```bash
   cp my_linux_setup/.tmux.conf ~
   ```
+ 
+## Set Accessibility of your home
+
+Finally, set the accessibility of your home dir. The 700 means only yourself can read/write.
+```bash
+chmod 700 -R .
+```
 
