@@ -70,14 +70,30 @@
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   ```
   *required to clone into `~/.vim/bundle`*
+  
+- *\[Optional\]* [gh](https://cli.github.com/manual/): Github's client.
+
+  The server that I am using blocks SSH connection. So I insteadly use this gh to login to my github. This is even more convenient than generate a SSH key and put to public key to the github account.
+  ```bash
+  conda install gh --channel conda-forge
+  ```
+  Run `gh auth login` to authenticate with your GitHub account.
+  
 
 ## Configuration Files
+Clone this repo to get the configuration files:
+```bash
+git clone https://github.com/viridityzhu/my_linux_setup.git
+```
 
 - `.vimrc`
   ```bash
   cp my_linux_setup/.vimrc ~
   ```
-  To install Vim plugins from command line: `vim +PluginInstall +qall`
+  To install Vim plugins from command line: 
+  ```bash
+  vim +PluginInstall +qall
+  ```
 
 - `.bashrc`
 
