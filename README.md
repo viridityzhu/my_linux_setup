@@ -104,6 +104,7 @@ git clone https://github.com/viridityzhu/my_linux_setup.git
   ```bash
   cp my_linux_setup/.tmux.conf ~
   ```
+  This is borrowed from [gpakosz/.tmux](https://github.com/gpakosz/.tmux). I don't remember whether I have modified or not. The original repo contains many explanations about the features. Do have a look.
  
 ## Set Accessibility of your home
 
