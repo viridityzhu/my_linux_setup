@@ -1,31 +1,13 @@
 # My Linux Setup
 
-## Useful commands
-  
-- Check cuda version
-  ```bash
-  nvcc -V
-  ```
+This repo is for me to set up a fresh install of Linux with basic and useful customizations.
 
-- Check gpu status
-  ```bash
-  nvidia-smi
-  ```
+## Features
 
-- Check cpu usage: 
-  ```bash
-  htop
-  ```
- 
-- List all softwares
-  ```bash
-  dpkg --get-selections
-  ```
-
-- Output the results to a `.txt` file
-  ```bash
-  dpkg --get-selections > installed-software.txt
-  ```
+- Set up a fresh install of Linux nicely and lightly (within 10 mins).
+- Customized appearances and keybinds for bash, tmux, and vim.
+- Light but cool plugins, such as ranger, tldr, and bashmarks.
+- Suitable for vim+tmux+conda users.
 
 ## Download Useful Softwares
 
@@ -122,4 +104,31 @@ Finally, set the accessibility of your home dir. The 700 means only yourself can
 ```bash
 chmod 700 -R .
 ```
+
+## Useful commands
+  
+- Check cuda version
+  ```bash
+  nvcc -V
+  ```
+
+- Check gpu status
+  ```bash
+  nvidia-smi
+  ```
+
+- Check cpu usage: 
+  ```bash
+  htop
+  ```
+ 
+- List all softwares
+  ```bash
+  dpkg --get-selections
+  ```
+
+- Output the results to a `.txt` file
+  ```bash
+  dpkg --get-selections > installed-software.txt
+  ```
 
