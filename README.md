@@ -49,12 +49,16 @@
   pipx install ranger-fm
   ```
   Usage: `ranger` to open a file system window that is very cool.
+  
+  ![image](https://user-images.githubusercontent.com/39082096/229707017-516f3dd9-d278-4522-ae49-9c1d946291f4.png)
 
 - [tldr](https://github.com/tldr-pages/tldr): too long; don't read
   ```bash
   pipx install tldr
   ```
   Usage: `tldr [command]` then it will teach you the common usage of the tool.
+  
+  ![tldr](https://github.com/tldr-pages/tldr/blob/main/images/tldr.svg)
 
 - [bashmarks](https://github.com/huyng/bashmarks)
   ```bash
@@ -102,9 +106,15 @@ git clone https://github.com/viridityzhu/my_linux_setup.git
 
 - `.tmux.conf`
   ```bash
-  cp my_linux_setup/.tmux.conf ~
+  git clone https://github.com/gpakosz/.tmux.git
+  ln -s -f .tmux/.tmux.conf
+  cp my_linux_setup/.tmux.conf.local ~
   ```
-  This is borrowed from [gpakosz/.tmux](https://github.com/gpakosz/.tmux). I don't remember whether I have modified or not. The original repo contains many explanations about the features. Do have a look.
+  This is borrowed from [gpakosz/.tmux](https://github.com/gpakosz/.tmux). My own configurations are stored in `.tmux.conf.local`. The original repo contains many explanations about the features. Do have a look.
+  
+  My tmux appearance:
+  ![image](https://user-images.githubusercontent.com/39082096/229707926-2f3a6482-a18e-4383-8da2-781472df7f96.png)
+
  
 ## Set Accessibility of your home
 
