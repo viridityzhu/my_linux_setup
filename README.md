@@ -33,6 +33,13 @@ This repo is for me to set up a fresh install of Linux with basic and useful cus
   Usage: `ranger` to open a file system window that is very cool.
   
   ![image](https://user-images.githubusercontent.com/39082096/229707017-516f3dd9-d278-4522-ae49-9c1d946291f4.png)
+  
+- [imgcat](https://github.com/danielgatis/imgcat): Display images and gifs in your terminal emulator
+  ```bash
+  curl "https://iterm2.com/utilities/imgcat" > imgcat
+  chmod +x imgcat
+  mv imgcat /home/jiayin/.local/bin
+  ```
 
 - [tldr](https://github.com/tldr-pages/tldr): too long; don't read
   ```bash
