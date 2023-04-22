@@ -14,8 +14,8 @@ set nocompatible " not compate with vi
 filetype off
 
 " ---------------------Vundle plugin management----------------
-set rtp+=~/.vim/bundle/Vundle.vim " set vundle as runtime path
-" set rtp+=/usr/local/opt/fzf " fzf fuzzy finder
+set rtp+=~/.vim/bundle/Vundle " set vundle as runtime path
+set rtp+=/usr/local/opt/fzf " fzf fuzzy finder
 call vundle#begin() " start vundle
 " 安装插件的三种方法：
 " 1. 直接在.vimrc 里填写在下面↓
@@ -37,10 +37,15 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'altercation/vim-colors-solarized'
+" colorscheme gruvbox
+Plugin 'morhetz/gruvbox'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'justinmk/vim-sneak'
 Plugin 'vim-python/python-syntax'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'dyng/ctrlsf'
+
 
 " http://vim-scripts.org/vim/scripts.html 的插件:
 " Plugin '插件名称'
@@ -71,28 +76,38 @@ filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和
 " :PluginSearch foo - 搜索 foo ; 追加 `!` 清除本地缓存
 " :PluginClean      - 清除未使用插件,需要确认; 追加 `!` 自动批准移除未使用插件
 
-" Hot to install new plugins:
+" How to install new plugins:
 " 1. :source %
 " 2. :PluginInstall
+
 "
 " 查阅 :h vundle 获取更多细节和wiki以及FAQ
 " 将你自己对非插件片段放在这行之后
 
 
 " -------colorscheme---------
-" set background=dark
-" colorscheme solarized
-if has("termguicolors") " true color!!!
-    " fix bug for vim
-    set t_8f=[38;2;%lu;%lu;%lum
-    set t_8b=[48;2;%lu;%lu;%lum
+set background=dark
+colorscheme gruvbox
 
-    " enable true color
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+if (empty($TMUX))
+  if (has("nvim"))
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+  if (has("termguicolors"))
     set termguicolors
+  endif
 endif
+
+autocmd vimenter * ++nested colorscheme gruvbox
+
 " -------------------My basic configurations----------------
-"
-set mouse=a
 let g:python_highlight_all = 1
 " 行号
 set number
@@ -100,12 +115,11 @@ set number
 set cursorline
 set showmatch " highlight {}()[] pairs
 set hlsearch " when search, highlight results
-set noai nosi
 " set spell spelllang=en_us " spell check 0.0
-" set textwidth=80
+set textwidth=80
 " set wrap
 " set linebreak " not wrap within a word
-" set wrapmargin=2
+set wrapmargin=2
 set scrolloff=5 " 垂直滚动时，光标距离顶部or底部多少行 （？）
 set sidescrolloff=15 " 水平滚动……
 set laststatus=2 " 0: not show status; 1: only show when multiple windows 2:show
@@ -187,5 +201,5 @@ func! RUN()
     endif
 endfunc
 
-" source ~/.vim/markdownSnippits.vim
+source ~/.vim/markdownSnippits.vim
 " autocmd Filetype markdown inoremap ,f
