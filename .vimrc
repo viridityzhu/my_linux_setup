@@ -14,8 +14,8 @@ set nocompatible " not compate with vi
 filetype off
 
 " ---------------------Vundle plugin management----------------
-set rtp+=~/.vim/bundle/Vundle " set vundle as runtime path
-set rtp+=/usr/local/opt/fzf " fzf fuzzy finder
+set rtp+=~/.vim/bundle/Vundle.vim " set vundle as runtime path
+" set rtp+=/usr/local/opt/fzf " fzf fuzzy finder
 call vundle#begin() " start vundle
 " 安装插件的三种方法：
 " 1. 直接在.vimrc 里填写在下面↓
@@ -109,17 +109,19 @@ autocmd vimenter * ++nested colorscheme gruvbox
 
 " -------------------My basic configurations----------------
 let g:python_highlight_all = 1
+set mouse=a
 " 行号
 set number
 " set relativenumber
 set cursorline
 set showmatch " highlight {}()[] pairs
+set noai nosi
 set hlsearch " when search, highlight results
 " set spell spelllang=en_us " spell check 0.0
-set textwidth=80
+" set textwidth=80
 " set wrap
 " set linebreak " not wrap within a word
-set wrapmargin=2
+" set wrapmargin=2
 set scrolloff=5 " 垂直滚动时，光标距离顶部or底部多少行 （？）
 set sidescrolloff=15 " 水平滚动……
 set laststatus=2 " 0: not show status; 1: only show when multiple windows 2:show
@@ -201,5 +203,5 @@ func! RUN()
     endif
 endfunc
 
-source ~/.vim/markdownSnippits.vim
+" source ~/.vim/markdownSnippits.vim
 " autocmd Filetype markdown inoremap ,f
