@@ -34,6 +34,12 @@ This repo is for me to set up a fresh install of Linux with basic and useful cus
   
   ![image](https://user-images.githubusercontent.com/39082096/229707017-516f3dd9-d278-4522-ae49-9c1d946291f4.png)
   
+- [gpustat](https://github.com/wookayin/gpustat): A simple command-line utility for querying and monitoring GPU status. (colorful and just less than `nvidia-smi`)
+  ```bash
+  pipx install gpustat
+  ```
+  ![image](https://user-images.githubusercontent.com/39082096/235125924-21a18062-808e-4dc1-855c-899c5a551938.png)
+  
 - [imgcat](https://github.com/danielgatis/imgcat): Display images and gifs in your terminal emulator
   ```bash
   curl "https://iterm2.com/utilities/imgcat" > imgcat
