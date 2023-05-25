@@ -30,7 +30,16 @@ This repo is for me to set up a fresh install of Linux with basic and useful cus
   ```bash
   pipx install ranger-fm
   ```
-  Usage: `ranger` to open a file system window that is very cool.
+  Usage: Use command `ranger` to open a file system window that is very cool.
+  
+  Tip: If you are also using iTerm2 on MacOS, you can easily **preview images** in ranger by following the steps below:
+  1. In the menu bar of iTerm2, select `iTerm2 -> Install Shell Integration`. (In a session which is connected to your remote Linux server via ssh)
+  2. Config ranger:
+     ```bash
+     ranger --copy-config=rc
+     ```
+     Then open `~/.config/ranger/rc.conf` and edit Line 74 to `set preview_images true` and Line 117 to `set preview_images_method iterm2`.
+  If you are not using iTerm2, there are also many other plugins supported by ranger for image preview. Just check out its [readme](https://github.com/ranger/ranger).
   
   ![image](https://user-images.githubusercontent.com/39082096/229707017-516f3dd9-d278-4522-ae49-9c1d946291f4.png)
   
