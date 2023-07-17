@@ -53,7 +53,7 @@ This repo is for me to set up a fresh install of Linux with basic and useful cus
   ```bash
   curl "https://iterm2.com/utilities/imgcat" > imgcat
   chmod +x imgcat
-  mv imgcat /home/jiayin/.local/bin
+  mv imgcat ~/.local/bin
   ```
 
 - [tldr](https://github.com/tldr-pages/tldr): too long; don't read
