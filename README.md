@@ -48,6 +48,7 @@ This repo is for me to set up a fresh install of Linux with basic and useful cus
   pipx install gpustat
   ```
   ![image](https://user-images.githubusercontent.com/39082096/235125924-21a18062-808e-4dc1-855c-899c5a551938.png)
+  **If you have `nvtop` on your server, then forget all the others!**
   
 - [imgcat](https://github.com/danielgatis/imgcat): Display images and gifs in your terminal emulator
   ```bash
