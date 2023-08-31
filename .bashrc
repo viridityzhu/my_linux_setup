@@ -146,3 +146,9 @@ source ~/.local/bin/bashmarks.sh
 # export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64:$LD_LIBRARY_PATH
 export PATH=/usr/local/cuda-10.2/bin:$PATH
 # export CUDA_HOME=/usr/local/cuda-10.2:$CUDA_HOME
+
+gpu () {
+    local devs=$1
+    shift
+    CUDA_VISIBLE_DEVICES="$devs" "$@"
+}
