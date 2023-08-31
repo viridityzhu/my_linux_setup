@@ -109,6 +109,16 @@ git clone https://github.com/viridityzhu/my_linux_setup.git
 
   *\[optional\] Uncommnet `force_color_prompt=yes` at around line 46.*
 
+  One useful alias is this:
+  ```bash
+  gpu () {
+    local devs=$1
+    shift
+    CUDA_VISIBLE_DEVICES="$devs" "$@"
+  }
+  ```
+  It works as aliases for `CUDA_VISIBLE_DEVICES=xxx` by simply using `gpu 0`, `gpu 1,2`, etc before commands.
+
 - `.tmux.conf`
   ```bash
   git clone https://github.com/gpakosz/.tmux.git
@@ -138,6 +148,10 @@ chmod 700 -R .
 - Check gpu status
   ```bash
   nvidia-smi
+  ```
+  or
+  ```bash
+  nvtop
   ```
 
 - Check cpu usage: 
