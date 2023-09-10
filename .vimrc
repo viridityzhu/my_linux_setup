@@ -44,6 +44,7 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'vim-python/python-syntax'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'wakatime/vim-wakatime'
 " Plugin 'dyng/ctrlsf'
 
 
