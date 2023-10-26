@@ -152,3 +152,7 @@ gpu () {
     shift
     CUDA_VISIBLE_DEVICES="$devs" "$@"
 }
+
+function notify_me() {
+    "$@" && (echo -e "\aCommand [$@] completed successfully!") || (echo -e "\aCommand [$@] failed!")
+}
