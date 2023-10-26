@@ -109,15 +109,9 @@ git clone https://github.com/viridityzhu/my_linux_setup.git
 
   *\[optional\] Uncommnet `force_color_prompt=yes` at around line 46.*
 
-  One useful alias is this:
-  ```bash
-  gpu () {
-    local devs=$1
-    shift
-    CUDA_VISIBLE_DEVICES="$devs" "$@"
-  }
-  ```
-  It works as aliases for `CUDA_VISIBLE_DEVICES=xxx` by simply using `gpu 0`, `gpu 1,2`, etc before commands.
+  Here I define some useful functions:
+  1. An aliases for `CUDA_VISIBLE_DEVICES=xxx` by simply using `gpu 0`, `gpu 1,2`, etc before commands.
+  2. To ring a bell after finishing a task: `notify_me [command]`
 
 - `.tmux.conf`
   ```bash
@@ -167,5 +161,12 @@ chmod 700 -R .
 - Output the results to a `.txt` file
   ```bash
   dpkg --get-selections > installed-software.txt
+  ```
+
+- An alias for `CUDA_VISIBLE_DEVICES=xxx` by simply using `gpu 0`, `gpu 1,2`, etc before commands.
+  
+- To ring a bell after finishing a task:
+  ```bash
+  notify_me [command]
   ```
 
