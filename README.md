@@ -13,20 +13,26 @@ This repo is for me to set up a fresh install of Linux with basic and useful cus
 
 - Conda
 
-  Download a latest Miniconda `.sh` installer: [https://docs.conda.io/en/latest/miniconda.html#linux-installers](https://docs.conda.io/en/latest/miniconda.html#linux-installers)
+  Download a latest Miniconda `.sh` installer: [https://docs.conda.io/en/latest/miniconda.html#linux-installers](https://docs.conda.io/en/latest/miniconda.html#linux-installers);
+  Alternately, directly download use wget:
+  ```bash
+  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  ```
+  Then install:
   ```bash
   sh Miniconda3-latest-Linux-x86_64.sh
   ```
-  *If you don't have a root permission, and you don't even have a `pip3` not to say an `apt`, then you can first install conda. Then you can use pip3.*
+  *If you don't have root permission, and you don't even have a `pip3` not to say an `apt`, then installing conda is essential, because after this you can use pip3.*
 
 - [pipx](https://pypa.github.io/pipx/): install and run end-user applications written in Python, providing isolated environment.
+  *You may need to reload your server to let conda refresh before going to the following steps.*
   ```bash
   python3 -m pip install --user pipx
   python3 -m pipx ensurepath
   python3 -m pip install --user --upgrade pipx
   ```
 
-- [Ranger](https://github.com/ranger/ranger): A VIM-inspired filemanager for the console
+- [Ranger](https://github.com/ranger/ranger): A VIM-inspired filemanager for the console. **Now you have a colorful and structural file manager!**
   ```bash
   pipx install ranger-fm
   ```
@@ -57,15 +63,15 @@ This repo is for me to set up a fresh install of Linux with basic and useful cus
   mv imgcat ~/.local/bin
   ```
 
-- [tldr](https://github.com/tldr-pages/tldr): too long; don't read
+- [tldr](https://github.com/tldr-pages/tldr): too long; don't read. A helper for command usages.
   ```bash
   pipx install tldr
   ```
-  Usage: `tldr [command]` then it will teach you the common usage of the tool.
+  Usage: `tldr [command]` then it will teach you the common usage of the command.
   
-  ![tldr](https://github.com/tldr-pages/tldr/blob/main/images/tldr.svg)
+  ![tldr](https://github.com/tldr-pages/tldr/blob/main/images/tldr-dark.png)
 
-- [bashmarks](https://github.com/huyng/bashmarks)
+- [bashmarks](https://github.com/huyng/bashmarks): Tag directories and jump quickly.
   ```bash
   git clone https://github.com/huyng/bashmarks.git
   cd bashmarks
@@ -96,7 +102,7 @@ cd
 git clone https://github.com/viridityzhu/my_linux_setup.git
 ```
 
-- `.vimrc`
+- `.vimrc`: `vim` configuration file.
   ```bash
   cp my_linux_setup/.vimrc ~
   ```
@@ -105,29 +111,35 @@ git clone https://github.com/viridityzhu/my_linux_setup.git
   vim +PluginInstall +qall
   ```
 
-- `.bashrc`
+- `.bashrc`: bash configuration file.
+  ```bash
+  cp my_linux_setup/.bashrc ~
+  ```
 
-  *\[optional\] Uncommnet `force_color_prompt=yes` at around line 46.*
+  *\[optional\] Uncomment `force_color_prompt=yes` at around line 46.*
 
-  Here I define some useful functions:
+  In this file, I predefined some useful functions:
   1. An aliases for `CUDA_VISIBLE_DEVICES=xxx` by simply using `gpu 0`, `gpu 1,2`, etc before commands.
   2. To ring a bell after finishing a task: `notify_me [command]`
 
-- `.tmux.conf`
+- `.tmux.conf`: `tmux` configuration file. 
   ```bash
   git clone https://github.com/gpakosz/.tmux.git
   ln -s -f .tmux/.tmux.conf
   cp my_linux_setup/.tmux.conf.local ~
   ```
-  This is borrowed from [gpakosz/.tmux](https://github.com/gpakosz/.tmux). My own configurations are stored in `.tmux.conf.local`. The original repo contains many explanations about the features. Do have a look.
+  This `.tmux.conf` config is borrowed from [gpakosz/.tmux](https://github.com/gpakosz/.tmux), containing appearance and shortcut modifications. Do read the source project for better usage.
+  My own modifications are separated in `.tmux.conf.local`.
   
   My tmux appearance:
   ![image](https://user-images.githubusercontent.com/39082096/229707926-2f3a6482-a18e-4383-8da2-781472df7f96.png)
 
+  If you are new to `tmux`, I strongly recommend this tutorial: [Tmux使用手册](https://louiszhai.github.io/2017/09/30/tmux/) (in Chinese).
+
  
 ## Set Accessibility of your home
 
-Finally, set the accessibility of your home dir. The 700 means only yourself can read/write.
+Finally, set the accessibility of your home dir. `700` means only yourself can read/write.
 ```bash
 chmod 700 -R .
 ```
@@ -158,7 +170,7 @@ chmod 700 -R .
   dpkg --get-selections
   ```
 
-- Output the results to a `.txt` file
+- Output the results to a `.txt` file by `>`
   ```bash
   dpkg --get-selections > installed-software.txt
   ```
