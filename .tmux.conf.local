@@ -92,6 +92,14 @@
  #   - false (default)
  tmux_conf_theme_highlight_focused_pane=false
 
+ # ============= self added -------------
+ # show pane title
+ set -g pane-border-status top
+ set -g pane-border-format "#[fg=black, bg=green] #{pane_index} #{@custom_pane_title}"
+ # rename pane by ctrl-a <
+ bind < command-prompt -p "New Title: " -I "#{@custom_pane_title}" "set-option -p @custom_pane_title '%%'"
+
+
  # focused pane colours:
  tmux_conf_theme_focused_pane_bg="$tmux_conf_theme_colour_2"
 
