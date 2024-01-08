@@ -112,6 +112,7 @@ git clone https://github.com/viridityzhu/my_linux_setup.git
   ```
 
 - `.bashrc`: bash configuration file.
+  **Note that it is dangerous and unnecessary to directly copy this bash config, because it will replace the original one. Only do this with confidence. Otherwise, it is recommended to copy and paste required configurations from the `.bashrc` file, e.g., the alias for `gpu [num]` and `notify_me`.**
   ```bash
   cp my_linux_setup/.bashrc ~
   ```
@@ -142,6 +143,13 @@ git clone https://github.com/viridityzhu/my_linux_setup.git
 Finally, set the accessibility of your home dir. `700` means only yourself can read/write.
 ```bash
 chmod 700 -R .
+```
+
+## Set Git global user info
+
+```bash
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
 ```
 
 ## Useful commands
