@@ -152,6 +152,50 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
 
+## My Setup v2.0 - zsh shell
+
+> I am now more familiar with zsh rather than bash. Luckily I left brief notes for the zsh setup. Let me copy it here.
+
+### Install zsh
+
+1. Installation requires root permission. You can still check if there is already zsh installed via: `cat /etc/shell`. For example, you may find: `/usr/bin/zsh`
+2. Use `chsh --shell zsh` to change user's default shell.
+3. However, this requires you to have real user permission. If you don't even have that, for example, on a lab cluster, you can use this semi-permanent way: add this to the end of `~/.bashrc`:
+	```bash
+	# If this terminal is interactive, switch to zsh
+	if [[ $- == *i* ]]; then
+	    exec zsh
+	fi
+	```
+4. Before jumping into zsh, let's install `oh-my-zsh` to ease the configuration of everything. It will replace your default `.zshrc` file with its fancy template that is easy to start with.
+
+
+### Configure zsh
+
+#### 1. old configs
+
+The first thing is to copy the useful configs in `.bashrc` into the new config file: `.zshrc`. For example, conda initialization, and your self-defined functions.
+
+#### 2. zsh theme/prompt
+
+- The original zsh already supports thousands of themes, and you can easily change them by altering `ZSH_THEME='xxx'`. Go to their website to find a favorite.  It even supports randomly selecting a theme each time you log in:
+- Otherwise, `powerlevel10k` is all you need. It is faster than the original themes, is easy to configure, and supports proper customization.
+
+#### 3. zsh plugins
+
+In the `.zshrc` file, easily enable plugins like this:
+
+```bash
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions autojump fd fzf)
+```
+
+`zsh-syntax-highlighting`, `zsh-autosuggestions`, and `fzf` are almost necessary. Search for them and install one by one, and do nothing since oh-my-zsh will help load them.
+
+#### 4. others
+
+1. `fzf` is for fuzzy finder. It needs additional configurations to be more powerful
+2. install `bat` for better highlighted `cat [file]`. But it seems not easy to install if I have not root permission ;)
+
 ## Useful commands
   
 - Check cuda version
