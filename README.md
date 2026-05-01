@@ -11,7 +11,7 @@ This repo is for me to set up a fresh install of Linux with basic and useful cus
 
 ## Download Useful Softwares
 
-- Conda
+- ~~Conda~~ I find [uv](https://github.com/astral-sh/uv) as a more modern alternative.
 
   Download a latest Miniconda `.sh` installer: [https://docs.conda.io/en/latest/miniconda.html#linux-installers](https://docs.conda.io/en/latest/miniconda.html#linux-installers);
   Alternately, directly download use wget:
@@ -32,7 +32,7 @@ This repo is for me to set up a fresh install of Linux with basic and useful cus
   python3 -m pip install --user --upgrade pipx
   ```
 
-- [Ranger](https://github.com/ranger/ranger): A VIM-inspired filemanager for the console. **Now you have a colorful and structural file manager!**
+- ~~[Ranger](https://github.com/ranger/ranger): A VIM-inspired filemanager for the console. **Now you have a colorful and structural file manager!**~~ Although I still love ranger, its successor, [Yazi](https://github.com/sxyazi/yazi), is written in Rust, faster, and more modern, so I have moved on. And there is no need to write installation instructions anymore; just ask AI to handle it.
   ```bash
   pipx install ranger-fm
   ```
