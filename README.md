@@ -34,6 +34,11 @@ This repo is for me to set up a fresh install of Linux with basic and useful cus
 
 - ~~[Ranger](https://github.com/ranger/ranger): A VIM-inspired filemanager for the console. **Now you have a colorful and structural file manager!**~~ Although I still love ranger, its successor, [Yazi](https://github.com/sxyazi/yazi), is written in Rust, faster, and more modern, so I have moved on. And there is no need to write installation instructions anymore; just ask AI to handle it.
   ```bash
+  pip install pipx # a messy one
+  pipx install yazi-bin
+  ```
+  *Below are deprecated*
+  ```bash
   pipx install ranger-fm
   ```
   Usage: Use command `ranger` to open a file system window that is very cool.
