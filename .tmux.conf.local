@@ -361,6 +361,9 @@ set -g default-terminal "xterm-256color"
  unbind %
  bind | splitw -h -c '#{pane_current_path}' # 水平方向新增面板，默认进入当前目录
 
+ # toggle mouse mode (useful for native browser text selection -> Cmd+C)
+ bind m set -g mouse \; display "mouse: #{?mouse,on,off}"
+
  # -- tpm -----------------------------------------------------------------------
 
  # while I don't use tpm myself, many people requested official support so here
